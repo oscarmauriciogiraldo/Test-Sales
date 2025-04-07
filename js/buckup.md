@@ -1,65 +1,4 @@
-<body>
-    <h1>Módulo de Ventas e Inventario</h1>
-    
-    <div>
-        <h2>Inventario Actual</h2>
-        <table id="inventoryTable">
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Producto</th>
-                    <th>Descripción</th>
-                    <th>Precio Unitario</th>
-                    <th>Stock</th>
-                    <th>Categoría</th>
-                    <th>Acciones</th>
-                </tr>
-            </thead>
-            <tbody id="inventoryBody">
-                <!-- Los datos se llenarán con JavaScript -->
-            </tbody>
-        </table>
-    </div>
-    
-    <div>
-        <h2>Registrar Venta</h2>
-        <div class="form-group">
-            <label for="productSelect">Producto:</label>
-            <select id="productSelect"></select>
-        </div>
-        <div class="form-group">
-            <label for="quantityInput">Cantidad:</label>
-            <input type="number" id="quantityInput" min="1" value="1">
-        </div>
-        <button onclick="makeSale()">Registrar Venta</button>
-        <div id="saleResult"></div>
-    </div>
-    
-    <div>
-        <h2>Agregar Producto</h2>
-        <div class="form-group">
-            <label for="newProductName">Nombre:</label>
-            <input type="text" id="newProductName" required>
-        </div>
-        <div class="form-group">
-            <label for="newProductDesc">Descripción:</label>
-            <input type="text" id="newProductDesc">
-        </div>
-        <div class="form-group">
-            <label for="newProductPrice">Precio:</label>
-            <input type="number" id="newProductPrice" min="0" step="0.01" required>
-        </div>
-        <div class="form-group">
-            <label for="newProductStock">Stock Inicial:</label>
-            <input type="number" id="newProductStock" min="0" required>
-        </div>
-        <div class="form-group">
-            <label for="newProductCategory">Categoría:</label>
-            <input type="text" id="newProductCategory">
-        </div>
-        <button onclick="addProduct()">Agregar Producto</button>
-        <div id="addProductResult"></div>
-    </div>
+
 
 <script>
         // Simulación de base de datos de inventario
@@ -228,3 +167,123 @@
         // Inicializar la tabla al cargar la página
         document.addEventListener("DOMContentLoaded", renderInventory);
     </script>
+
+
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Módulo de Ventas e Inventario</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        .low-stock {
+            background-color: #ffdddd;
+        }
+        .out-of-stock {
+            background-color: #ffb3b3;
+            color: #ff0000;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        button {
+            padding: 8px 15px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+            margin-right: 5px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Módulo de Ventas e Inventario</h1>
+    
+    <div>
+        <h2>Inventario Actual</h2>
+        <table id="inventoryTable">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Producto</th>
+                    <th>Descripción</th>
+                    <th>Precio Unitario</th>
+                    <th>Stock</th>
+                    <th>Categoría</th>
+                    <th>Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="inventoryBody">
+                <!-- Los datos se llenarán con JavaScript -->
+            </tbody>
+        </table>
+    </div>
+    
+    <div>
+        <h2>Registrar Venta</h2>
+        <div class="form-group">
+            <label for="productSelect">Producto:</label>
+            <select id="productSelect"></select>
+        </div>
+        <div class="form-group">
+            <label for="quantityInput">Cantidad:</label>
+            <input type="number" id="quantityInput" min="1" value="1">
+        </div>
+        <button onclick="makeSale()">Registrar Venta</button>
+        <div id="saleResult"></div>
+    </div>
+    
+    <div>
+        <h2>Agregar Producto</h2>
+        <div class="form-group">
+            <label for="newProductName">Nombre:</label>
+            <input type="text" id="newProductName" required>
+        </div>
+        <div class="form-group">
+            <label for="newProductDesc">Descripción:</label>
+            <input type="text" id="newProductDesc">
+        </div>
+        <div class="form-group">
+            <label for="newProductPrice">Precio:</label>
+            <input type="number" id="newProductPrice" min="0" step="0.01" required>
+        </div>
+        <div class="form-group">
+            <label for="newProductStock">Stock Inicial:</label>
+            <input type="number" id="newProductStock" min="0" required>
+        </div>
+        <div class="form-group">
+            <label for="newProductCategory">Categoría:</label>
+            <input type="text" id="newProductCategory">
+        </div>
+        <button onclick="addProduct()">Agregar Producto</button>
+        <div id="addProductResult"></div>
+    </div>
+
+    
+</body>
+</html>

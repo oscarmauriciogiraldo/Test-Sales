@@ -3,13 +3,39 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Admin OscarArt</title>
+    <title>Inventario Granja</title>
 
     <!-- *** styles *** -->
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/cardStyles.css">
   </head>
   <body>
+    <header>
+      <h2>Inventario granja</h2>
+    </header>
+    <div class="container">
+      <table id="inventoryTable">
+        <!-- ***** head table ***** -->
+        <thead class="headTable">
+          <tr>
+            <th>ID</th>
+            <th>Producto</th>
+            <th>Descripción</th>
+            <th>Precio Unitario</th>
+            <th>Stock</th>
+            <th>Categoría</th>
+            <th>Acciones</th>
+          </tr>
+        </thead>
+        <tbody id="productsInventory">
+          <!-- Los datos se llenarán con Dinammicamente JavaScript simulando el consumo de un api -->
+        </tbody>
+      </table>
+
+      <section id="addProduct"></section>
+    </div>
+
+
     <!-- **** scripts function and interactive functions -->
     <script src="js/main.js"></script>
   </body>
