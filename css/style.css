@@ -6,7 +6,14 @@
   --text-color: #e6edf3;
   --primary-color: #00bfa3;
   --second-color: #1f6feb; */
+  --background-form: #7f7d7d79;
+  --container-color: #fff;
   --text-color: #174d37;
+  --hue: 240;
+
+  /* *** z index **** */
+  --z-modal: 1000;
+
 
   /* **** Fonts **** */
   --font-family: "IBM Plex Sans", sans-serif;
@@ -41,6 +48,41 @@ h2{
   width: 100%;
   justify-content: center;
   align-items: center;
+  gap: 1.5rem;
+}
+
+.container
+.containbuttonAdd{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 1.5rem;
+}
+
+.container
+.containbuttonAdd
+button{
+
+  display: flex;
+  background-color: var(--text-color);
+  color: wheat;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: all  0.5s ease-in;
+  border-radius: 5px;
+  font-family: var(--font-family);
+  padding: 0.5rem 1.5rem;
+  font-size: 1.3rem;
+}
+
+.container
+.containbuttonAdd
+button:hover{
+  background-color: #f3c10e;
+  color: black;
 }
 
 .container
@@ -89,4 +131,109 @@ tr:nth-child(even) {
 .out-of-stock {
   background-color: #ffb3b3;
   color: #ff0000;
+}
+
+
+.addingProduct{
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: hsla(var(--hue), 18%, 75%, 0.8);
+  width: 100%;
+  height: 100%;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  transition: all 0.3s;
+  z-index: var(--z-modal);
+  visibility: hidden;
+  opacity: 0;
+  
+}
+
+.show-modal{
+  visibility: visible;
+  opacity: 1;
+}
+
+.container
+.addingProduct
+.containerForm{
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: relative;
+  /* background: red; */
+  background-color: var(--container-color);
+  text-align: center;
+  padding: 4rem 2rem 6rem 2rem;
+  border-radius: 1rem 1rem;
+  transition: all 0.3s ease;
+
+  /*=== Effect 1 ===*/
+  /* transform: translateY(10%); */
+
+  /*=== Effect 2 ===*/
+  /* transform: scale(.5) translateY(10%); */
+
+  /*=== Effect 3 ===*/
+  /* transform: rotateX(65deg) scale(.75) translateY(10%);
+    transform-origin: 50% 100%; */
+}
+
+.container
+.addingProduct
+.containerForm
+form{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  border-radius: 18px;
+  border: none;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  padding: 1.5rem;
+  background: var(--background-form);
+  
+}
+
+.container
+.addingProduct
+.containerForm
+form
+.input{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  width: 100%;
+  gap: 2px;
+  padding: 0.3rem 1rem ;
+}
+
+.container
+.addingProduct
+.containerForm
+form
+.input
+label{
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.container
+.addingProduct
+.containerForm
+form
+.input
+input{
+  border-radius: 5px;
+  border: none;
+  padding: 12px 8px;
 }
